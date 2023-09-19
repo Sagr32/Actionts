@@ -27,7 +27,8 @@ jobs:
         with:
           name: report
           path: app/build/reports/lint-results-debug.html
-
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
   test:
     needs: [lint]
     runs-on: ubuntu-latest
