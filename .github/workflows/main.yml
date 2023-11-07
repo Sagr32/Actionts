@@ -36,3 +36,15 @@ jobs:
       with:
           name: app
           path: app/build/outputs/apk/debug/app-debug.apk
+          
+  automerge:
+    runs-on: ubuntu-latest
+    steps:
+      - id: automerge
+        name: automerge
+        uses: "pascalgn/automerge-action@v0.15.6"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"      
+
+          
+    
